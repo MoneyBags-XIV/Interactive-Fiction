@@ -1,2 +1,6 @@
 if __name__ == '__main__':
-    pass
+    main()
+
+def main():
+    while True:
+        print('>>>')
