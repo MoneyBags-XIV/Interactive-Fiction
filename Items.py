@@ -1,6 +1,26 @@
-import Definitions
+class Item:
+    def __init__(self, names, description, breakable, deadly=False, portable=True, edible=False, drinkable=False, container=False):
+        self.names = names
+        self.description = description
+        self.breakable = breakable
+        self.deadly = deadly
+        self.portable = portable
+        self.edible = edible
+        self.drinkable = drinkable
+        self.container = container
+
+    def __str__(self):
+        return self.names
 
 items = [
-    Definitions.Item(['thing', 'object'], 'This is a boring thing.', True),
-    Definitions.Item(['refrigerator', 'fridge'], 'This is an ordinary, white refrigerator.', False, portable=False, container=True)
+    Item(['thing', 'object'], 'This is a boring thing.', True),
+    Item(['refrigerator', 'fridge'], 'This is an ordinary, white refrigerator.', False, portable=False, container=True)
 ]
+
+def check_items(name):
+    answer = False
+    for i in range(len(items)):
+        if name in items[i].names:
+            answer = True
+            break
+    return answer
