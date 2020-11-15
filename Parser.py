@@ -15,7 +15,7 @@ def parse(input):
 
     for word in words:
         if word not in Verbs.verbs.keys() and Items.check_items(word) == False and word != 'using' and word != 'use' and word != 'with':
-            objection = 'I don\'t know the word " ' + word + '".'
+            objection = 'I don\'t know the word "' + word + '".'
     
     if objection == 'none':
         for word in words:
