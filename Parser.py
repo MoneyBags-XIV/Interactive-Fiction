@@ -9,18 +9,17 @@ def parse(input):
     indirect = 'none'
     objection = 'none'
 
-    for word in words:
-        for unnecessary in ['an', 'and', 'the', 'thee', 'a', 'of']:
-            if word == unnecessary:
-                del word
+    for i in range(len(words)-1, -1, -1):
+        if words[i] in ['an', 'and', 'the', 'thee', 'a', 'of', 'to']:
+            del words[i]
 
     for word in words:
-        if word not in Verbs.verbs and Items.check_items(word) == False and word != 'using' and word != 'use' and word != 'with':
-            objection = 'I don\'t know the word " ' + word + '."'
+        if word not in Verbs.verbs.keys() and Items.check_items(word) == False and word != 'using' and word != 'use' and word != 'with':
+            objection = 'I don\'t know the word " ' + word + '".'
     
     if objection == 'none':
         for word in words:
-            if word in Verbs.verbs:
+            if word in Verbs.verbs.keys():
                 verb = word
                 del word
                 break
@@ -38,10 +37,12 @@ def parse(input):
                         indirect = words[words.index('using')+1]
                         del words[words.index('using')+1]
                         del words[words.index('using')]
+                        
                     elif 'use' in words:
                         indirect = words[words.index('use')+1]
                         del words[words.index('use')+1]
                         del words[words.index('use')]
+
                     elif 'with' in words:
                         indirect = words[words.index('with')+1]
                         del words[words.index('with')+1]
