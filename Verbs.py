@@ -1,11 +1,22 @@
+from random import choice
+
+generic_sass = ['Don\'t be silly.',
+    'Pull yourself together!',
+    'Nice try.',
+    'Behave yourself!',
+    'And they call humans sophisticated.',
+    'Oh please.',
+    'Seriously!?!'
+]
+
 def hit():
-    print(':)')
+    print('Killed.')
 
 def take():
-    print(':P')
+    print('Taken.')
 
 def go():
-    print(':(')
+    print('Gone')
 
 verbs = {'hit': hit,
     'kill': hit,
