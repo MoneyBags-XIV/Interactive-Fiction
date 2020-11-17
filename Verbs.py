@@ -9,6 +9,10 @@ generic_sass = ['Don\'t be silly.',
     'Seriously!?!'
 ]
 
+def find_indirect(verb, noun):
+    indirect = input('What do you want to '+verb+' the '+noun+' with?\n>>>')
+    return indirect
+
 def hit(noun, indirect):
     print('Killed.')
 
