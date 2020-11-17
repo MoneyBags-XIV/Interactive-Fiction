@@ -58,8 +58,5 @@ def parse(input):
                         noun = word
                         del word
                         break
-
-                if noun == 'none':
-                    objection = 'There\'s no noun in that sentence!'
     
     return verb, noun, indirect, objection
