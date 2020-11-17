@@ -9,7 +9,7 @@ def main():
             if noun == indirect:
                 print(choice(Verbs.generic_sass))
             else:
-                Verbs.verbs[verb]()
+                Verbs.verbs[verb](noun, indirect)
         else:
             print(objection)
 
