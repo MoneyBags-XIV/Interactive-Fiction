@@ -31,7 +31,11 @@ def parse(input):
             if 'using' or 'use' or 'with' in words:
                 if words.count('using') + words.count('use') + words.count('with') > 1:
                     objection = 'I don\'t understand that sentence!'
-                    
+
+                for thing in ['using', 'use', 'with']:
+                    if words.index(thing) + 1 > len(words):
+                        objection = 'I don\'t understand that sentence!'
+                
                 else:
                     if 'using' in words:
                         indirect = words[words.index('using')+1]
