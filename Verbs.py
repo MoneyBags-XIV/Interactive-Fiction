@@ -4,7 +4,6 @@ generic_sass = ['Don\'t be silly.',
     'Pull yourself together!',
     'Nice try.',
     'Behave yourself!',
-    'And they call humans sophisticated.',
     'Oh please.',
     'Seriously!?!'
 ]
