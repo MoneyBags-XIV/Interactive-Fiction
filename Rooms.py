@@ -5,7 +5,7 @@ class Room:
         self.description = description
         self.directions = directions
 
-    def move(self, direction):
+    def go(self, direction):
         if direction in self.directions.keys():
             return self.directions[direction]
         
