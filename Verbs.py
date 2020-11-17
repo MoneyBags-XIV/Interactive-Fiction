@@ -9,14 +9,14 @@ generic_sass = ['Don\'t be silly.',
     'Seriously!?!'
 ]
 
-def hit():
+def hit(noun, indirect):
     print('Killed.')
 
-def take():
+def take(noun, indirect):
     print('Taken.')
 
-def go():
-    print('Gone')
+def go(noun, indirect):
+    print('Gone.')
 
 verbs = {'hit': hit,
     'kill': hit,
