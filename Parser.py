@@ -39,20 +39,11 @@ def parse(input):
                             objection = 'I don\'t understand that sentence!'
 
                 if objection == 'none':
-                    if 'using' in words:
-                        indirect = words[words.index('using')+1]
-                        del words[words.index('using')+1]
-                        del words[words.index('using')]
-                            
-                    elif 'use' in words:
-                        indirect = words[words.index('use')+1]
-                        del words[words.index('use')+1]
-                        del words[words.index('use')]
-
-                    elif 'with' in words:
-                        indirect = words[words.index('with')+1]
-                        del words[words.index('with')+1]
-                        del words[words.index('with')]
+                    for thing in ['using', 'use', 'with']:
+                        if thing in words:
+                            indirect = words[words.index(thing)+1]
+                            del words[words.index(thing)+1]
+                            del words[words.index(thing)]
 
                     if objection == 'none':
                         for word in words:
