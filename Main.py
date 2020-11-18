@@ -6,7 +6,7 @@ def main():
     while True:
         verb, noun, indirect, objection = Parser.parse(input('>>>'))
         if objection == 'none':
-            if noun == indirect:
+            if noun == indirect and noun != 'none':
                 print(choice(Verbs.generic_sass))
             else:
                 Verbs.verbs[verb](noun, indirect)
