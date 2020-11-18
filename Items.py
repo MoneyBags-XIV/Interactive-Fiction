@@ -14,7 +14,7 @@ class Item:
 
 items = [
     Item(['thing', 'object'], 'This is a boring thing.', breakable=True),
-    Item(['refrigerator', 'fridge'], 'This is an ordinary, white refrigerator.', breakble=False, portable=False, container=True)
+    Item(['refrigerator', 'fridge'], 'This is an ordinary, white refrigerator.', portable=False, container=True)
 ]
 
 def check_items(name):
