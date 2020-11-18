@@ -1,5 +1,5 @@
 class Item:
-    def __init__(self, names, description, breakable, deadly=False, portable=True, edible=False, drinkable=False, container=False):
+    def __init__(self, names, description, breakable=False, deadly=False, portable=True, edible=False, drinkable=False, container=False):
         self.names = names
         self.description = description
         self.breakable = breakable
@@ -13,8 +13,8 @@ class Item:
         return self.names
 
 items = [
-    Item(['thing', 'object'], 'This is a boring thing.', True),
-    Item(['refrigerator', 'fridge'], 'This is an ordinary, white refrigerator.', False, portable=False, container=True)
+    Item(['thing', 'object'], 'This is a boring thing.', breakable=True),
+    Item(['refrigerator', 'fridge'], 'This is an ordinary, white refrigerator.', breakble=False, portable=False, container=True)
 ]
 
 def check_items(name):
