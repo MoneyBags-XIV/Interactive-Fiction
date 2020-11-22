@@ -5,7 +5,9 @@ generic_sass = ['Don\'t be silly.',
     'Nice try.',
     'Behave yourself!',
     'Oh please.',
-    'Seriously!?!'
+    'Seriously!?!',
+    'So uncivilized.',
+    'You can\'t do that!'
 ]
 
 def find_indirect(verb, noun):
