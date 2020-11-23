@@ -12,6 +12,9 @@ generic_sass = ['Don\'t be silly.',
     'You can\'t do that!'
 ]
 
+
+
+
 def find_indirect(verb, noun):
     indirect = input('What do you want to '+verb+' the '+noun+' with?\n>>>')
     return indirect
@@ -19,6 +22,15 @@ def find_indirect(verb, noun):
 def find_noun(verb):
     noun = input('What do you want to '+verb+'?')
     return noun
+
+def describe(place):
+    print(Rooms.rooms[place].description)
+    for thing in Items.items:
+        if thing.location == place:
+            print('The '+thing.names[0]+' is here.')
+
+
+
 
 def hit(noun, indirect, place):
     print('Killed.')
@@ -28,6 +40,9 @@ def take(noun, indirect,place):
 
 def go(noun, indirect, place):
     print('Gone.')
+
+
+
 
 verbs = {'hit': hit,
     'kill': hit,
