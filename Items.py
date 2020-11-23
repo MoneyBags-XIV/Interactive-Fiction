@@ -2,6 +2,7 @@ class Item:
     def __init__(self, names, description, location, breakable=False, deadly=False, portable=True, edible=False, drinkable=False, container=False):
         self.names = names
         self.description = description
+        self.location = location
         self.breakable = breakable
         self.deadly = deadly
         self.portable = portable
