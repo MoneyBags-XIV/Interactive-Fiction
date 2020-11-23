@@ -20,13 +20,13 @@ def find_noun(verb):
     noun = input('What do you want to '+verb+'?')
     return noun
 
-def hit(noun, indirect):
+def hit(noun, indirect, place):
     print('Killed.')
 
-def take(noun, indirect):
+def take(noun, indirect,place):
     print('Taken.')
 
-def go(noun, indirect):
+def go(noun, indirect, place):
     print('Gone.')
 
 verbs = {'hit': hit,
