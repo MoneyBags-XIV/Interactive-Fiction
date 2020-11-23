@@ -3,6 +3,8 @@ import Verbs
 from random import choice
 
 def main():
+    place = 1
+    Verbs.describe(place)
     while True:
         verb, noun, indirect, objection = Parser.parse(input('>>>'))
         if objection == 'none':
