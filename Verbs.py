@@ -1,3 +1,5 @@
+import Rooms
+import Items
 from random import choice
 
 generic_sass = ['Don\'t be silly.',
