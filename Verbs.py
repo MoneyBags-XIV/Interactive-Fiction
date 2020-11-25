@@ -9,7 +9,8 @@ generic_sass = ['Don\'t be silly.',
     'Oh please.',
     'Seriously!?!',
     'So uncivilized.',
-    'You can\'t do that!'
+    'You can\'t do that!',
+    'Good luck.'
 ]
 
 
